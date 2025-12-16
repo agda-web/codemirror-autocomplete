@@ -34,6 +34,9 @@ export const acceptCompletion: Command = (view: EditorView) => {
   if (view.state.readOnly || !cState || !cState.open || cState.open.selected < 0 || cState.open.disabled ||
       Date.now() - cState.open.timestamp < view.state.facet(completionConfig).interactionDelay)
     return false
+  if (view.state.facet(completionConfig).suppressCompletion?.(view.state)) {
+    return false
+  }
   return applyCompletion(view, cState.open.options[cState.open.selected])
 }
 

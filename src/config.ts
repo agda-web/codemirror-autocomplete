@@ -90,6 +90,8 @@ export interface CompletionConfig {
   /// displaying results from faster sources. Defaults to 100
   /// milliseconds.
   updateSyncTime?: number
+
+  suppressCompletion?: (state: EditorState) => boolean
 }
 
 export const completionConfig = Facet.define<CompletionConfig, Required<CompletionConfig>>({
