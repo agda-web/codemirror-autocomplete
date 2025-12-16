@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // from https://github.com/marijnh/buildtool/blob/main/src/buildtool.ts
+    "lib": ["es6", "scripthost", "dom"],
+    "types": ["mocha"],
+    "stripInternal": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "target": "es6",
+    "module": "es2020",
+    "newLine": "lf",
+    "declaration": true,
+    "moduleResolution": "node",
+    // end
+
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
