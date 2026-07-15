@@ -1,8 +1,9 @@
+import {Extension} from "@codemirror/state"
 import {EditorView} from "@codemirror/view"
 
 export const enum Info { Margin = 30, Width = 400 }
 
-export const baseTheme = EditorView.baseTheme({
+export const baseTheme: Extension = EditorView.baseTheme({
   ".cm-tooltip.cm-tooltip-autocomplete": {
     "& > ul": {
       fontFamily: "monospace",
